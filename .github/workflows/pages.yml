@@ -38,6 +38,7 @@ jobs:
       - name: Build static site
         env:
           NEXT_PUBLIC_BASE_PATH: /gardarika-show
+          NEXT_PUBLIC_SITE_URL: https://daridarom.github.io
         run: npx next build
 
       - name: Upload Pages artifact
