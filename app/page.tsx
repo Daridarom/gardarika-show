@@ -1,5 +1,7 @@
 import MobileCall from "./mobile-call";
 
+const assetPrefix = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 type Program = {
   title: string;
   summary: string;
@@ -14,7 +16,7 @@ const programs: Program[] = [
   {
     title: "Флаг-шоу",
     summary: "Трюковые постановки, российский триколор, «Узоры России» и флаги с символикой заказчика.",
-    image: "/media/event-flags.webp",
+    image: `${assetPrefix}/media/event-flags.webp`,
     alt: "Артисты Гардарики исполняют флаг-шоу в цветах России",
     category: "Открытие · финал",
     use: "Для государственных дат, спортивных событий, концертов, форумов и больших сцен.",
@@ -22,7 +24,7 @@ const programs: Program[] = [
   {
     title: "Огненное шоу",
     summary: "Динамичная постановка с огнём, спецэффектами и пиротехнической кульминацией.",
-    image: "/media/event-fire.webp",
+    image: `${assetPrefix}/media/event-fire.webp`,
     alt: "Артист Гардарики во время огненного шоу",
     category: "Кульминация",
     use: "Для фестивалей, городских праздников, корпоративов и вечерних open-air мероприятий.",
@@ -30,7 +32,7 @@ const programs: Program[] = [
   {
     title: "Световое шоу",
     summary: "LED-костюмы, световая графика и синхронная хореография в современном сценическом формате.",
-    image: "/media/event-led.webp",
+    image: `${assetPrefix}/media/event-led.webp`,
     alt: "Артисты в светодиодных костюмах на сцене",
     category: "Сцена · indoor",
     use: "Для залов, презентаций, новогодних событий и площадок, где можно создать затемнение.",
@@ -38,7 +40,7 @@ const programs: Program[] = [
   {
     title: "Танцевальное шоу",
     summary: "Народная и современная хореография, вальс, ретро и тематические концертные номера.",
-    image: "/media/gardarika-dance.png",
+    image: `${assetPrefix}/media/gardarika-dance.png`,
     alt: "Танцевальный номер творческого коллектива Гардарика",
     category: "Концертный блок",
     use: "Для официальных церемоний, концертов, фестивалей и корпоративных программ.",
@@ -47,7 +49,7 @@ const programs: Program[] = [
   {
     title: "Джигитовка",
     summary: "Конное мастерство и эффектные трюки, объединённые в зрелищную историческую программу.",
-    image: "/media/gardarika-horse.png",
+    image: `${assetPrefix}/media/gardarika-horse.png`,
     alt: "Конное выступление и джигитовка Гардарики",
     category: "Открытая площадка",
     use: "Для исторических фестивалей, парков, городских праздников и больших уличных площадок.",
@@ -56,7 +58,7 @@ const programs: Program[] = [
   {
     title: "Оригинальный жанр",
     summary: "Воздушное кольцо, эквилибр и пластические номера с сильным визуальным образом.",
-    image: "/media/gardarika-ring.png",
+    image: `${assetPrefix}/media/gardarika-ring.png`,
     alt: "Артистка Гардарики исполняет номер на воздушном кольце",
     category: "Визуальный акцент",
     use: "Для гала-ужинов, презентаций, концертных программ и камерных событий.",
@@ -65,7 +67,7 @@ const programs: Program[] = [
   {
     title: "Фланкировка и фехтование",
     summary: "Сценическое владение шашкой и клинком — сольные и групповые постановки.",
-    image: "/media/program-flanking.webp",
+    image: `${assetPrefix}/media/program-flanking.webp`,
     alt: "Артисты Гардарики исполняют фланкировку с шашками",
     category: "История · драйв",
     use: "Для патриотических программ, исторических фестивалей и тематических праздников.",
@@ -73,7 +75,7 @@ const programs: Program[] = [
   {
     title: "Акробатическое шоу",
     summary: "Силовые элементы, трюковые связки и выразительная пластика в цельной постановке.",
-    image: "/media/gardarika-acro.png",
+    image: `${assetPrefix}/media/gardarika-acro.png`,
     alt: "Акробатический номер творческого коллектива Гардарика",
     category: "Сильный номер",
     use: "Для больших сцен, церемоний, форумов и событий, которым нужен мощный визуальный эпизод.",
@@ -82,7 +84,7 @@ const programs: Program[] = [
   {
     title: "Вокальный дуэт",
     summary: "Живое исполнение народной, ретро- и современной программы с хореографией.",
-    image: "/media/gardarika-vocal.png",
+    image: `${assetPrefix}/media/gardarika-vocal.png`,
     alt: "Вокалистки творческого коллектива Гардарика на сцене",
     category: "Живой звук",
     use: "Для встреч гостей, концертов, тематических вечеров и продолжительных программ с выходами.",
@@ -91,7 +93,7 @@ const programs: Program[] = [
   {
     title: "Экстрим-шоу",
     summary: "Силовые и трюковые элементы, искры и энергия живого перформанса.",
-    image: "/media/gardarika-sparks.png",
+    image: `${assetPrefix}/media/gardarika-sparks.png`,
     alt: "Экстрим-шоу Гардарики с силовыми трюками и искрами",
     category: "Драйв · интерактив",
     use: "Для молодёжных событий, фестивалей, спортивных праздников и динамичных корпоративов.",
@@ -100,7 +102,7 @@ const programs: Program[] = [
   {
     title: "Роллер-шоу",
     summary: "Скорость, танец и акробатика на роликовых коньках в действительно мобильном формате.",
-    image: "/media/roller-show.webp",
+    image: `${assetPrefix}/media/roller-show.webp`,
     alt: "Артисты выполняют трюки во время роллер-шоу",
     category: "Скорость · движение",
     use: "Для спортивных событий, городских площадок, фестивалей и молодёжных программ.",
@@ -109,7 +111,7 @@ const programs: Program[] = [
   {
     title: "Народные забавы",
     summary: "Игры, состязания и хороводы, которые превращают зрителей в участников события.",
-    image: "/media/event-maslenitsa.webp",
+    image: `${assetPrefix}/media/event-maslenitsa.webp`,
     alt: "Народная интерактивная программа на Масленице",
     category: "Интерактив",
     use: "Для Масленицы, ярмарок, семейных фестивалей, тимбилдингов и народных гуляний.",
@@ -118,7 +120,7 @@ const programs: Program[] = [
   {
     title: "Иммерсивное шоу",
     summary: "Артисты работают внутри пространства, развивают сюжет и вовлекают гостей в действие.",
-    image: "/media/immersive-show.webp",
+    image: `${assetPrefix}/media/immersive-show.webp`,
     alt: "Иммерсивное представление с артистами и участниками события",
     category: "Гость внутри сюжета",
     use: "Для презентаций, тематических вечеров, исторических маршрутов и нестандартных площадок.",
@@ -127,7 +129,7 @@ const programs: Program[] = [
   {
     title: "Салюты и фейерверки",
     summary: "Финальный визуальный акцент, который синхронизируется с драматургией программы.",
-    image: "/media/fireworks-show.webp",
+    image: `${assetPrefix}/media/fireworks-show.webp`,
     alt: "Профессиональный фейерверк над площадкой события",
     category: "Большой финал",
     use: "Для городских праздников, фестивалей, свадеб и масштабных частных событий.",
@@ -138,39 +140,39 @@ const cases = [
   {
     title: "Открытие матча «Зенит» — «Спартак»",
     place: "Лукойл Арена",
-    image: "/media/event-flags.webp",
+    image: `${assetPrefix}/media/event-flags.webp`,
     alt: "Флаг-шоу на большой спортивной арене",
   },
   {
     title: "Огненное шоу на HOST BIKE FEST",
     place: "Международный байкерский фестиваль",
-    image: "/media/event-fire.webp",
+    image: `${assetPrefix}/media/event-fire.webp`,
     alt: "Огненное шоу на фестивальной площадке",
   },
   {
     title: "Юбилей Петербургского метрополитена",
     place: "БКЗ «Октябрьский»",
-    image: "/media/gardarika-dance.png",
+    image: `${assetPrefix}/media/gardarika-dance.png`,
     alt: "Танцевальная программа Гардарики на концертной сцене",
     contain: true,
   },
   {
     title: "Новогоднее шоу в горном парке",
     place: "Рускеала · Карелия",
-    image: "/media/program-newyear.webp",
+    image: `${assetPrefix}/media/program-newyear.webp`,
     alt: "Новогодняя программа Гардарики",
   },
   {
     title: "Акробатическое шоу на ВДНХ",
     place: "«Выставочная Россия»",
-    image: "/media/gardarika-acro.png",
+    image: `${assetPrefix}/media/gardarika-acro.png`,
     alt: "Акробатическое выступление Гардарики",
     contain: true,
   },
   {
     title: "Флаг-шоу на чемпионате России",
     place: "Соревнования по конкуру",
-    image: "/media/event-horse.webp",
+    image: `${assetPrefix}/media/event-horse.webp`,
     alt: "Флаг-шоу и конная программа на открытой арене",
   },
 ];
@@ -195,7 +197,7 @@ function BrandLogo({ labelled = false }: { labelled?: boolean }) {
   return (
     <img
       className="brand-logo"
-      src="/brand/gardarika-transparent.png"
+      src={`${assetPrefix}/brand/gardarika-transparent.png`}
       alt={labelled ? "Гардарика — творческий коллектив" : ""}
       aria-hidden={labelled ? undefined : true}
     />
@@ -239,15 +241,15 @@ export default function Home() {
 
         <div className="hero-media" aria-label="Выступления творческого коллектива Гардарика">
           <figure className="hero-photo hero-photo-main">
-            <img src="/media/event-flags.webp" alt="Масштабное флаг-шоу Гардарики" />
+            <img src={`${assetPrefix}/media/event-flags.webp`} alt="Масштабное флаг-шоу Гардарики" />
             <figcaption>Флаг-шоу · большая сцена</figcaption>
           </figure>
           <figure className="hero-photo hero-photo-fire">
-            <img src="/media/event-fire.webp" alt="Огненное шоу Гардарики" />
+            <img src={`${assetPrefix}/media/event-fire.webp`} alt="Огненное шоу Гардарики" />
             <figcaption>Огонь</figcaption>
           </figure>
           <figure className="hero-photo hero-photo-roller">
-            <img src="/media/roller-show.webp" alt="Роллер-шоу Гардарики" />
+            <img src={`${assetPrefix}/media/roller-show.webp`} alt="Роллер-шоу Гардарики" />
             <figcaption>Роллер-шоу</figcaption>
           </figure>
           <div className="hero-seal"><span>Соберём</span><strong>ваш формат</strong></div>
@@ -336,7 +338,7 @@ export default function Home() {
         </div>
         <div className="project-stack section-shell">
           <article className="project-card project-gardarika">
-            <div className="project-media"><img src="/media/event-led.webp" alt="Световое шоу Гардарики" loading="lazy" decoding="async" /></div>
+            <div className="project-media"><img src={`${assetPrefix}/media/event-led.webp`} alt="Световое шоу Гардарики" loading="lazy" decoding="async" /></div>
             <div className="project-copy">
               <span className="project-index">01 · Шоу</span>
               <div className="project-brand project-brand-gardarika"><BrandLogo labelled /></div>
@@ -348,10 +350,10 @@ export default function Home() {
           </article>
 
           <article className="project-card project-podvorye">
-            <div className="project-media"><img src="/media/event-history.webp" alt="Историческая реконструкция проекта Русское подворье" loading="lazy" decoding="async" /></div>
+            <div className="project-media"><img src={`${assetPrefix}/media/event-history.webp`} alt="Историческая реконструкция проекта Русское подворье" loading="lazy" decoding="async" /></div>
             <div className="project-copy">
               <span className="project-index">02 · Фестиваль</span>
-              <img className="project-symbol" src="/brand/podvorye.png" alt="Русское подворье" loading="lazy" decoding="async" />
+              <img className="project-symbol" src={`${assetPrefix}/brand/podvorye.png`} alt="Русское подворье" loading="lazy" decoding="async" />
               <h3>«Русское подворье»</h3>
               <p>Живая история России в формате маршрута по эпохам: реконструкция, ремёсла, музыка, интерактив и сцена.</p>
               <ul><li><MarkIcon />Древняя Русь, Империя, СССР</li><li><MarkIcon />Казачья застава и ремесленная ярмарка</li><li><MarkIcon />Конные и сценические программы</li></ul>
@@ -360,10 +362,10 @@ export default function Home() {
           </article>
 
           <article className="project-card project-events">
-            <div className="project-media"><img src="/media/event-water.webp" alt="Масштабное событие на воде" loading="lazy" decoding="async" /></div>
+            <div className="project-media"><img src={`${assetPrefix}/media/event-water.webp`} alt="Масштабное событие на воде" loading="lazy" decoding="async" /></div>
             <div className="project-copy">
               <span className="project-index">03 · Организация</span>
-              <img className="project-symbol" src="/brand/prazdniki.png" alt="Праздники События" loading="lazy" decoding="async" />
+              <img className="project-symbol" src={`${assetPrefix}/brand/prazdniki.png`} alt="Праздники События" loading="lazy" decoding="async" />
               <h3>«Праздники События»</h3>
               <p>Организация городских, корпоративных и частных мероприятий — от идеи и программы до финального шоу.</p>
               <ul><li><MarkIcon />Государственные даты и фестивали</li><li><MarkIcon />Концерты, ярмарки, тимбилдинги</li><li><MarkIcon />Авторские культурные проекты</li></ul>
@@ -399,7 +401,7 @@ export default function Home() {
           <div><strong>Гибкая конфигурация</strong><span>От одного номера до большого сценария.</span></div>
           <div><strong>Понятная подготовка</strong><span>Заранее согласуем площадку и технику.</span></div>
         </div>
-        <div className="client-line"><span>Среди заказчиков</span><img src="/media/clients.png" alt="Логотипы заказчиков творческого коллектива Гардарика" loading="lazy" decoding="async" /></div>
+        <div className="client-line"><span>Среди заказчиков</span><img src={`${assetPrefix}/media/clients.png`} alt="Логотипы заказчиков творческого коллектива Гардарика" loading="lazy" decoding="async" /></div>
       </section>
 
       <section className="contacts" id="contacts" aria-labelledby="contacts-title">
